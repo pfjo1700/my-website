@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arrowstar Capital GmbH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #111827; /* Background image integration */ background: url("background.jpg") no-repeat center center fixed; background-size: cover; }
+
+    a {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Top alert / email strip */
+    .top-strip {
+      background: #111827;
+      color: #e5e7eb;
+      font-size: 0.85rem;
+      padding: 0.35rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .top-strip span {
+      opacity: 0.9;
+    }
+
+    .top-strip a {
+      color: #93c5fd;
+      font-weight: 500;
+    }
+
+    /* Header with logo and nav */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-text {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+    }
+	.logo-image {
+  	height: 40px;        /* Adjust size here */
+ 	width: auto;         /* Keeps proportions */
+  	display: block;
+	}
+
+
+    .company-name {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #111827;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-link {
+      color: #4b5563;
+      font-weight: 500;
+    }
+
+    .nav-link-cta {
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    /* Main content */
+    main {
+      max-width: 960px;
+      margin: 2.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .hero {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .hero h1 {
+      font-size: 1.7rem;
+      margin-bottom: 0.75rem;
+      color: #111827;
+    }
+
+    .hero h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+      margin-bottom: 1rem;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    .hero p + p {
+      margin-top: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-top: 1.8rem;
+      margin-bottom: 0.6rem;
+      color: #111827;
+    }
+
+    /* Contact block */
+    .contact {
+      margin-top: 2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+    }
+
+    .contact p {
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Small links row (terms, privacy, etc.) */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-links a {
+      color: #4b5563;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b7280;
+      padding: 1.5rem 1rem 2rem;
+    }
+
+    /* Disclaimer block styled like a legal section */
+    .disclaimer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .disclaimer h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: #111827;
+    }
+
+    .disclaimer p {
+      font-size: 0.85rem;
+      color: #4b5563;
+      margin-bottom: 0.6rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 1.5rem 1.25rem;
+      }
+
+      .hero h1 {
+        font-size: 1.4rem;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top email strip -->
+  <div class="top-strip">
+    <span>Enter your email address to access our client portal.</span>
+    <a href="#contact">Client portal</a>
+  </div>
+
+  <!-- Header with logo and navigation -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-text">
+        <img src="logo.jpg" alt="Company Logo" class="logo-image">
+        <div class="company-name">Arrowstar Capital GmbH</div>
+      </div>
+      <nav>
+        <a href="#content" class="nav-link">About</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#login" class="nav-link-cta">Client Portal</a>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <!-- Main content -->
+  <main id="content">
+    <section class="hero">
+      <h1>Arrowstar Capital</h1>
+      <h2>About</h2>
+
+      <p>
+        Welcome to Arrowstar Capital, where innovation meets tradition in the world of finance. As pioneers navigating both, 	traditional finance and the blockchain technology, we bring a unique blend of expertise to empower your financial 	journey.
+      </p>
+      <p>
+        Whether your seek time-tested strategies or groundbreaking solutions in the cutting-edge blockchain space, Arrowstar 	Capital is your dedicated partner, committed to crafting tailored investment strategies.
+      </p>
+      
+      <h3 id="team" class="section-title">Team</h3>
+      <p>
+        Our team of investment and risk specialists continuously refines our approach using both qualitative insight 
+        and quantitative analysis, with a strong focus on capital preservation and transparent risk management.
+      </p>
+
+      <div class="disclaimer">
+        <h3>Important information</h3>
+        <p>
+          Access to certain areas of this website may be restricted to professional or qualified investors as defined 
+          under the applicable laws and regulations in their jurisdiction. By proceeding, you are responsible for ensuring 
+          that you are permitted to access this information under the laws and regulations that apply to you.
+        </p>
+      </div>
+
+      <div id="contact" class="contact">
+        <h3 class="section-title">Contact</h3>
+	<address>
+        Arrowstar Capital GmbH<br>
+        Richtiarkade 23<br>
+        8304 Wallisellen
+	Switzerland
+	</address>
+ 	</div>
+
+        <ul class="contact-list">
+          <li><strong>Phone:</strong> +41 44 591 84 70</li>
+          <li><strong>Email:</strong> <a href="mailto:arrowstarcapital@protonmail.com">arrowstarcapital@protonmail.com</a></li>
+          <li><strong>Website:</strong> <a href="https://www.arrowstarcapital.ch" target="_blank">				www.arrowstarcapital.ch</a></li>
+        </ul>
+
+        <div class="footer-links">
+          <a href="#terms">Terms of use</a>
+          <a href="#privacy">Privacy statement</a>
+          <a href="#legal">Legal notice</a>
+        </div>
+      </div>
+
+      <div id="login" style="margin-top: 2rem; font-size: 0.9rem;">
+        <h3 class="section-title">Client portal</h3>
+        <p>
+          Existing clients can log in to access reports and research. 
+          For access requests, please contact us via email.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © <span id="year"></span> Arrowstar Capital GmBH – All rights reserved.
+  </footer>
+
+  <script>
+    // Set current year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
