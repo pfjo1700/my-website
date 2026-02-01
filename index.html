@@ -158,16 +158,21 @@
         box-shadow: -2px 0 10px rgba(0,0,0,0.1);
         transform: translateX(100%);
         transition: transform 0.3s ease;
-        overflow: hidden;
+		overflow: hidden;
+		z-index: 1000;
       }
 
       nav.active {
         transform: translateX(0);
       }
 
-      .hamburger {
-        display: flex;
-      }
+	   .hamburger {
+		display: flex;
+		position: fixed;      
+		top: 25px;
+		right: 20px;
+		z-index: 1001;        
+	  }
 
       .hamburger.active div:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -270,4 +275,3 @@
 
 </body>
 </html>
-
