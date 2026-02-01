@@ -15,6 +15,7 @@
       font-family: "Open Sans", Arial, sans-serif;
       color: #000;
       background: #fff;
+      overflow-x: hidden;
     }
 
     .inner {
@@ -23,7 +24,7 @@
       padding: 0 20px;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
     header {
       padding: 20px 0;
       background: #fff;
@@ -66,7 +67,7 @@
       background: #A5171D;
     }
 
-    /* Hamburger Menu */
+    /* ================= HAMBURGER ================= */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -84,7 +85,7 @@
       transition: all 0.3s ease;
     }
 
-    /* Hero */
+    /* ================= HERO ================= */
     .hero {
       padding: 80px 0;
       background: url("hero-bg.jpg") center / cover no-repeat;
@@ -96,9 +97,9 @@
       margin: 0;
     }
 
-    /* Contact / Address */
+    /* ================= CONTACT ================= */
     #contact {
-      padding: 60px 0 180px; 
+      padding: 60px 0 180px;
       background: #fff;
     }
 
@@ -121,48 +122,52 @@
       font-weight: bold;
     }
 
-    /* Footer */
+    /* ================= FOOTER ================= */
     footer {
       background: #000;
       color: #aaa;
-      text-align: center;
-      padding: 30px 0 250px;
       font-size: 14px;
+      padding: 30px 0 250px;
+      text-align: center; /* CENTER text */
+    }
+
+    footer p {
+      margin: 0;
     }
 
     footer p:last-child {
       font-size: 12px;
       color: #888;
-      max-width: 900px;
-      margin: 10px auto 0;
+      margin-top: 10px;
       line-height: 1.5;
     }
 
-    /* ===== RESPONSIVE STYLES ===== */
+    /* ================= RESPONSIVE ================= */
     @media (max-width: 768px) {
+
       nav {
         position: fixed;
         top: 0;
-        right: -250px; /* hidden by default */
-        width: 250px;
+        right: 0;
+        width: 260px;
         height: 100%;
         background: #fff;
         flex-direction: column;
         padding: 80px 20px;
         gap: 20px;
         box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        transition: right 0.3s ease;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
       }
 
       nav.active {
-        right: 0;
+        transform: translateX(0);
       }
 
       .hamburger {
         display: flex;
       }
 
-      /* Animate hamburger into X when open */
       .hamburger.active div:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
@@ -178,7 +183,7 @@
       }
 
       #contact {
-        padding-bottom: 60px;
+        padding-bottom: 80px;
       }
     }
 
@@ -205,11 +210,13 @@
     <div class="logo">
       <img src="logo.png" alt="Arrowstar Capital">
     </div>
+
     <div class="hamburger" id="hamburger">
       <div></div>
       <div></div>
       <div></div>
     </div>
+
     <nav id="nav-menu">
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -240,12 +247,14 @@
 </section>
 
 <footer>
-  <p>&copy; 2026 Arrowstar Capital GmbH. All rights reserved.</p>
-  <p>
-    The materials on this website are for illustration and discussion purposes only and do not constitute an offering.
-    An offering may be made only by delivery of a confidential offering memorandum to appropriate investors.
-    Past performance is not guarantee of future results.
-  </p>
+  <div class="inner">
+    <p>&copy; 2026 Arrowstar Capital GmbH. All rights reserved.</p>
+    <p>
+      The materials on this website are for illustration and discussion purposes only and do not constitute an offering.
+      An offering may be made only by delivery of a confidential offering memorandum to appropriate investors.
+      Past performance is not guarantee of future results.
+    </p>
+  </div>
 </footer>
 
 <script>
@@ -260,4 +269,3 @@
 
 </body>
 </html>
-
