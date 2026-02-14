@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrowstar Capital</title>
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+<header>
+  <div class="inner header-inner">
+    <div class="logo">
+      <img src="images/logo.png" alt="Arrowstar Capital">
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="#about">About</a>
+      <a href="mailto:info@arrowstarcapital.ch?subject=[Arrowstar%20Capital%20GmbH]%20Contact%20Request">Contact</a>
+      <a href="login.html" class="login-btn">Log In</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="inner">
+    <p>
+      Arrowstar Capital is a risk and investment advisory boutique specializing in traditional and decentralized finance,
+      combining blockchain expertise with robust risk management to support long-term investment objectives.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="inner">
+    <div class="address">
+      <p class="city">Zurich</p>
+      <p class="company">Arrowstar Capital GmbH</p>
+      <p>Richtiarkade 23</p>
+      <p>8304 Wallisellen</p>
+      <p>041 44 591 84 70</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <p>&copy; 2026 Arrowstar Capital GmbH. All rights reserved.</p>
+    <p>
+      The materials on this website are for illustration and discussion purposes only and do not constitute an offering.
+      An offering may be made only by delivery of a confidential offering memorandum to appropriate investors.
+      Past performance is not guarantee of future results.
+    </p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
