@@ -90,3 +90,116 @@
   font-size: 13px;
   line-height: 1.5;
 }
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal box */
+.modal-content {
+  background: #b30000;
+  color: #fff;
+  padding: 35px 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.modal-content p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* White modal version */
+.white-modal {
+  background: #ffffff;
+  color: #333;
+  position: relative;
+}
+
+/* Forgot password link */
+.forgot {
+  margin-top: 15px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #b30000;
+  text-align: center;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* Reset input */
+.white-modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Reset button */
+.white-modal button {
+  width: 100%;
+  padding: 10px;
+  background: #b30000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Error message */
+.reset-error {
+  display: none;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #b30000;
+}
+
+/* Close button */
+.close-forgot {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
